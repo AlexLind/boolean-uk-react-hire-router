@@ -8,13 +8,7 @@ import "./styles.css";
 export default function App() {
   const [hiredPeople, setHiredPeople] = useState([]);
 
-  const [people, setPeople] = useState([]);
 
-  useEffect(() => {
-    fetch("https://randomuser.me/api/?results=50")
-      .then((res) => res.json())
-      .then((data) => setPeople(data.results));
-  }, []);
 
   return (
     <>
@@ -31,7 +25,7 @@ export default function App() {
       <Routes>
         <Route
           path="/"
-          element={<Dashboard hiredPeople={hiredPeople} people={people} />}
+          element={<Dashboard hiredPeople={hiredPeople} />}
         />
         <Route
           path="/view/:id"

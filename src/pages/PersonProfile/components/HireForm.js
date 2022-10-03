@@ -22,7 +22,7 @@ function HireForm(props) {
         id="wage"
         name="wage"
         onChange={(e) => setWage(e.target.value)}
-        value={wage}
+        placeholder={person.wage ? person.wage : 0}
       />
       <button type="submit">Hire</button>
     </form>
